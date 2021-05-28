@@ -1,0 +1,14 @@
+.page {
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.page__body {
+  display: grid;
+  max-width: $desktop;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  //временные стили
+  outline: 1px solid lightgray;
+  outline-offset: 2px;
+}
