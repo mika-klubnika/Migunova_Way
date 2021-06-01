@@ -1,0 +1,66 @@
+.footer {
+  padding-top: 33px;
+  padding-bottom: 80px;
+
+  @media (max-width: $max-mobile) {
+    padding-top: 33px;
+  }
+}
+
+.footer__title {
+  margin-bottom: 18px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--dark);
+
+  @media (max-width: $max-tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.next-trips__list {
+  &:not(:last-child) {
+    margin-right: 50px;
+
+    @media (max-width: $max-tablet) {
+      margin-right: 47px;
+    }
+
+    @media (max-width: $max-mobile) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $max-mobile) {
+    &:first-child {
+      margin-right: 74px;
+    }
+
+    &:last-child {
+      margin-top: 14px;
+    }
+  }
+}
+
+.footer__content-block {
+  &:not(:last-child) {
+    border-right: 1px solid var(--light-gray);
+
+    @media (max-width: $max-mobile) {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: $max-tablet) {
+    &:nth-child(2) {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: $max-mobile) {
+    text-align: center;
+    border-top: 1px solid var(--light-gray);
+  }
+}

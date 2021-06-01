@@ -1,14 +1,10 @@
 .page {
   font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--dark-07);
 }
 
 .page__body {
-  display: grid;
-  max-width: $desktop;
-  min-height: 100vh;
-  margin: 0 auto;
-
-  //временные стили
-  outline: 1px solid lightgray;
-  outline-offset: 2px;
+  margin: 0;
 }
