@@ -44,18 +44,6 @@ const html = () => {
 
 exports.html = html;
 
-//Scripts
-
-const scripts = () => {
-  return gulp.src("source/js/*.js")
-    .pipe(uglify())
-    .pipe(rename(path => path.basename += ".min"))
-    .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
-}
-
-exports.scripts = scripts;
-
 // Images
 
 const images = () => {
@@ -65,7 +53,7 @@ const images = () => {
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -75,7 +63,7 @@ exports.images = images;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.createWebp = createWebp;
@@ -95,6 +83,7 @@ exports.sprite = sprite;
 
 const copy = () => {
   return gulp.src([
+    "source/js/*.js",
     "source/fonts/*.{woff2,woff}",
     "source/img/**/*.{jpg,png,svg,webp}",
     "!source/img/icons/*"
@@ -139,21 +128,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
-
-//graphicsOptimize
-
-const graphicsOptimize = gulp.series(
-  gulp.parallel(
-    images,
-    createWebp
-  )
-);
-
-exports.graphicsOptimize = graphicsOptimize;
 
 //Build
 
@@ -162,9 +139,10 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
     sprite,
-    copy
+    copy,
+    images,
+    createWebp
   )
 );
 
@@ -177,9 +155,9 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
     sprite,
-    copy
+    copy,
+    createWebp
   ),
   gulp.series(
     server,

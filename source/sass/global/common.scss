@@ -1,3 +1,48 @@
+.container {
+  max-width: $max-desktop;
+  margin: 0 auto;
+
+  @media (max-width: $max-tablet) {
+    min-width: $min-tablet;
+    max-width: $max-tablet;
+  }
+
+  @media (max-width: $max-mobile) {
+    min-width: $min-mobile;
+    max-width: $max-mobile;
+  }
+
+  &--banner {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: $max-tablet) {
+      justify-content: center;
+    }
+  }
+
+  &--footer {
+    display: grid;
+    grid-template-columns: 402px 390px 370px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (max-width: $max-tablet) {
+      grid-template-columns: 408px 350px;
+      grid-template-rows: auto auto;
+      row-gap: 20px;
+      padding-left: 5px;
+    }
+
+    @media (max-width: $max-mobile) {
+      grid-template-columns: 288px;
+      grid-template-rows: auto auto auto;
+      row-gap: 12px;
+      padding-left: 10px;
+    }
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -19,4 +64,68 @@
 
 .text {
   margin: 0;
+}
+
+.title {
+  position: relative;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.25px;
+  color: var(--grayish);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: var(--coral);
+
+    @media (max-width: $max-tablet) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $max-tablet) {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  @media (max-width: $max-mobile) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.button {
+  height: 75px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--white);
+  background-color: var(--coral);
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: $max-tablet) {
+    height: 50px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &:hover {
+    background-color: var(--orange);
+  }
 }
