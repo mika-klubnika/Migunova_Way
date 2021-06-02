@@ -94,10 +94,18 @@
   line-height: 32px;
   color: var(--black);
 
+  &:hover {
+    color: var(--coral);
+  }
+
   @media (max-width: $max-tablet) {
     padding-left: 0;
     font-size: 18px;
     color: var(--coral);
+
+    &:hover {
+      color: var(--black);
+    }
   }
 }
 

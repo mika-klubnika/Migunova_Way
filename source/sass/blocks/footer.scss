@@ -2,6 +2,11 @@
   padding-top: 33px;
   padding-bottom: 80px;
 
+  @media (max-width: $max-tablet) {
+    display: grid;
+    justify-self: center;
+  }
+
   @media (max-width: $max-mobile) {
     padding-top: 33px;
   }

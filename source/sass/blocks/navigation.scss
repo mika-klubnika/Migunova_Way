@@ -112,6 +112,23 @@
   }
 }
 
+.navigation--nojs .navigation__open {
+  display: none;
+}
+
+.navigation--nojs {
+  @media (max-width: $max-tablet) {
+    flex-direction: column;
+
+    & .navigation__list {
+      position: static;
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+
 .navigation__list {
   display: flex;
 
