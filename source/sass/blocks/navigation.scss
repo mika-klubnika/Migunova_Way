@@ -56,6 +56,7 @@
     right: 15px;
 
     display: block;
+    z-index: 6;
     width: 35px;
     height: 35px;
     padding: 0;
@@ -106,7 +107,7 @@
   }
 }
 
-.navigation--close .navigation__list {
+.navigation--close .navigation__inner {
   @media (max-width: $max-tablet) {
     display: none;
   }
@@ -217,8 +218,10 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--coral);
+    outline: none;
   }
 }
 

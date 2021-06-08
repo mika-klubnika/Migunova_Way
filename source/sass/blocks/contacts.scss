@@ -39,6 +39,11 @@
     font-size: 16px;
     line-height: 32px;
   }
+
+  &:hover,
+  &:focus {
+    color: var(--black);
+  }
 }
 
 .contacts__svg {

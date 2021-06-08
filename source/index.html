@@ -22,15 +22,17 @@
       </a>
       <button class="navigation__open" type="button" aria-label="Открыть меню"></button>
 
-      <ul class="navigation__list list">
+      <div class="navigation__inner">
         <button class="navigation__close" type="button" aria-label="Закрыть меню"></button>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#places">О&#160;путешествии</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#prices">Цены</a>
-        </li>
-      </ul>
+        <ul class="navigation__list list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#places">О&#160;путешествии</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#prices">Цены</a>
+          </li>
+        </ul>
+      </div>
 
       <a class="navigation__link navigation__link--phone" href="tel:+749978468446" aria-label="Телефон для связи">
         <svg class="navigation__svg" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,24 +153,24 @@
 
         <ul class="place-descriptions__navigation list">
           <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link place-descriptions__navigation-link--active" href="#">Греция</a>
+            <a class="place-descriptions__navigation-link place-descriptions__navigation-link--active" data-id="1">Греция</a>
           </li>
           <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Албания</a>
+            <a class="place-descriptions__navigation-link" data-id="2">Албания</a>
           </li>
           <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Македония</a>
+            <a class="place-descriptions__navigation-link" data-id="3">Македония</a>
           </li>
           <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Черногория</a>
+            <a class="place-descriptions__navigation-link" data-id="4">Черногория</a>
           </li>
           <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Хорватия</a>
+            <a class="place-descriptions__navigation-link" data-id="5">Хорватия</a>
           </li>
         </ul>
 
         <ul class="place-descriptions__list list">
-          <li class="place-descriptions__item" id="greece">
+          <li class="place-descriptions__item place-descriptions__item--active" id="greece">
             <div class="place-descriptions__wrapper-text">
               <h3 class="place-descriptions__title title text">Греция</h3>
               <p class="place-descriptions__text text">На севере Греции находится один из крупнейших комплексов монастырей,
@@ -195,7 +197,10 @@
                 Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах.
                 Ощущение такое, как будто стоишь на краю света!</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-greece.jpg" srcset="img/avatar-greece@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-greece.webp 1x, img/avatar-greece@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-greece.jpg" srcset="img/avatar-greece@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Влада Голицина</cite>
               </div>
             </blockquote>
@@ -226,7 +231,10 @@
               <p class="place-descriptions__review-text text">Замечательный курорт, обязательно стоит посетить. В
                 следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-albania.jpg" srcset="img/avatar-albania@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-albania.webp 1x, img/avatar-albania@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-albania.jpg" srcset="img/avatar-albania@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Маришка</cite>
               </div>
             </blockquote>
@@ -258,7 +266,10 @@
                 разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота
                 природы впечатлила, особенно после долгого пути в гору.</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-macedonia.jpg" srcset="img/avatar-macedonia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-macedonia.webp 1x, img/avatar-macedonia@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-macedonia.jpg" srcset="img/avatar-macedonia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Михаил Кузьмин</cite>
               </div>
             </blockquote>
@@ -286,7 +297,10 @@
               <h4 class="place-descriptions__review text">Отзывы</h4>
               <p class="place-descriptions__review-text text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-montenegro.jpg" srcset="img/avatar-montenegro@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-montenegro.webp 1x, img/avatar-montenegro@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-montenegro.jpg" srcset="img/avatar-montenegro@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Анастасия Мей</cite>
               </div>
             </blockquote>
@@ -317,7 +331,10 @@
                 незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не
                 верилось, но натур ни с чем не спутать по итогу :)</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-croatia.jpg" srcset="img/avatar-croatia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-croatia.webp 1x, img/avatar-croatia@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-croatia.jpg" srcset="img/avatar-croatia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Владимир Мулицин</cite>
               </div>
             </blockquote>
@@ -475,7 +492,7 @@
 
           <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST">
             <label class="form__label form__label--tel" for="phone">
-              <input class="form__input form__input--tel form__input--modal" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 Введите 10 цифр номера">
+              <input class="form__input form__input--tel form__input--modal" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 Введите 10 цифр номера" required>
             </label>
 
             <label class="form__label" for="email">
@@ -497,11 +514,11 @@
           <button class="success__close" type="button" aria-label="Закрыть окно"></button>
         </div>
       </div>
-      </div>
     </section>
   </template>
 
   <script src="js/menu.js"></script>
+  <script src="js/tabs.js"></script>
   <script src="js/modal.js"></script>
 </body>
 
