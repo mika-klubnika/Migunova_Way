@@ -14,6 +14,16 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 
+const ghPages = require('gh-pages');
+const path = require('path');
+
+const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+
+exports.deploy = deploy;
+
+
 // Styles
 
 const styles = () => {
