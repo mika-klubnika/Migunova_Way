@@ -65,6 +65,11 @@
   &--active {
     color: var(--coral);
   }
+
+  &:hover,
+  &:focus {
+    color: var(--black);
+  }
 }
 
 .place-descriptions__item {

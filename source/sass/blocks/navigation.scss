@@ -10,6 +10,11 @@
     padding-top: 19px;
     padding-left: 20px;
   }
+
+  @media (max-width: $max-mobile) {
+    padding-top: 18px;
+    padding-left: 16px;
+  }
 }
 
 .navigation__logo {
@@ -28,7 +33,7 @@
   }
 }
 
-.navigation__open {
+.navigation__toggle {
   display: none;
 
   @media (max-width: $max-tablet) {
@@ -39,63 +44,57 @@
     display: block;
     width: 72px;
     height: 50px;
+    z-index: 6;
     padding: 0;
 
     background-color: var(--coral);
     cursor: pointer;
     border: none;
   }
-}
 
-.navigation__close {
-  display: none;
-
-  @media (max-width: $max-tablet) {
-    position: absolute;
-    top: 13px;
-    right: 15px;
-
-    display: block;
-    z-index: 6;
-    width: 35px;
-    height: 35px;
-    padding: 0;
-
-    background-color: var(--transparent);
-    cursor: pointer;
-    border: none;
+  @media (max-width: $max-mobile) {
+    width: 50px;
   }
 }
 
-.navigation--close .navigation__open::before {
+.navigation--close .navigation__toggle::before {
   content: "";
   position: absolute;
   top: 18px;
-  left: 27px;
+  right: 24px;
   width: 22px;
   height: 1px;
   background-color: var(--white);
   box-shadow: 0 6px 0 0 var(--white), 0 12px 0 0 var(--white);
+
+  @media (max-width: $max-mobile) {
+    right: 13px;
+  }
 }
 
-.navigation--close .navigation__open:active::before {
+.navigation--close .navigation__toggle:active::before {
   background-color: fade(var(--white), 30%);
   box-shadow:
     0 6px 0 0 fade(var(--white), 30%),
     0 12px 0 0 fade(var(--white), 30%);
 }
 
-.navigation--open .navigation__close {
+.navigation--open .navigation__toggle {
+  background-color: var(--white);
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 14px;
-    left: 1px;
+    top: 24px;
+    right: 20px;
     width: 30px;
     height: 2px;
     background-color: var(--gray-02);
+
+    @media (max-width: $max-mobile) {
+      right: 8px;
+    }
   }
 
   &::before {
@@ -107,13 +106,13 @@
   }
 }
 
-.navigation--close .navigation__inner {
+.navigation--close .navigation__list {
   @media (max-width: $max-tablet) {
     display: none;
   }
 }
 
-.navigation--nojs .navigation__open {
+.navigation--nojs .navigation__button--open {
   display: none;
 }
 
@@ -188,6 +187,7 @@
 
 .navigation__link {
   position: relative;
+  height: min-content;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;

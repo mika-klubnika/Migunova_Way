@@ -6,6 +6,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .modal__base {
   position: fixed;
   z-index: 4;
