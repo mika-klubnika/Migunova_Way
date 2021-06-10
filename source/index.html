@@ -33,7 +33,7 @@
         </ul>
 
       <a class="navigation__link navigation__link--phone" href="tel:+749978468446" aria-label="Телефон для связи">
-        <svg class="navigation__svg" width="17" height="24">
+        <svg class="navigation__svg phone-svg" width="17" height="24">
           <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
         +7 (499) -784-684-46
@@ -52,7 +52,7 @@
             <p class="banner__text text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
             <a class="banner__link button button--flex" href="#countries">
               <span>смотреть тур</span>
-              <svg width="16" height="16">
+              <svg class="banner__svg" width="16" height="16">
                 <use xlink:href="img/sprite.svg#arrow"></use>
               </svg>
             </a>
@@ -67,7 +67,7 @@
         <p class="places__text text">Вы можете выбрать полный тур или<br> частичный, с посещением первых 3 мест</p>
 
         <ul class="places__list list">
-          <li class="places__item">
+          <li class="places__item" tabindex="0">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet.webp 1x, img/greece-tablet@2x.webp 2x">
@@ -82,7 +82,7 @@
               <a class="places__more" href="#greece">смотреть подробнее</a>
           </li>
 
-          <li class="places__item">
+          <li class="places__item" tabindex="0">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet.webp 1x, img/albania-tablet@2x.webp 2x">
@@ -97,7 +97,7 @@
               <a class="places__more" href="#albania">смотреть подробнее</a>
           </li>
 
-          <li class="places__item">
+          <li class="places__item" tabindex="0">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet.webp 1x, img/macedonia-tablet@2x.webp 2x">
@@ -112,7 +112,7 @@
               <a class="places__more" href="#macedonia">смотреть подробнее</a>
           </li>
 
-          <li class="places__item">
+          <li class="places__item" tabindex="0">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet.webp 1x, img/montenegro-tablet@2x.webp 2x">
@@ -127,7 +127,7 @@
               <a class="places__more" href="#montenegro">смотреть подробнее</a>
           </li>
 
-          <li class="places__item">
+          <li class="places__item" tabindex="0">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet.webp 1x, img/croatia-tablet@2x.webp 2x">
@@ -147,23 +147,25 @@
       <section class="place-descriptions" id="countries">
         <h2 class="visually-hidden">Описание мест посещения</h2>
 
+        <div class="place-descriptions__navigation-wrapper">
         <ul class="place-descriptions__navigation list">
-          <li class="place-descriptions__navigation-item">
+          <li class="place-descriptions__navigation-item" tabindex="0">
             <a class="place-descriptions__navigation-link place-descriptions__navigation-link--active" data-id="1">Греция</a>
           </li>
-          <li class="place-descriptions__navigation-item">
+          <li class="place-descriptions__navigation-item" tabindex="0">
             <a class="place-descriptions__navigation-link" data-id="2">Албания</a>
           </li>
-          <li class="place-descriptions__navigation-item">
+          <li class="place-descriptions__navigation-item" tabindex="0">
             <a class="place-descriptions__navigation-link" data-id="3">Македония</a>
           </li>
-          <li class="place-descriptions__navigation-item">
+          <li class="place-descriptions__navigation-item" tabindex="0">
             <a class="place-descriptions__navigation-link" data-id="4">Черногория</a>
           </li>
-          <li class="place-descriptions__navigation-item">
+          <li class="place-descriptions__navigation-item" tabindex="0">
             <a class="place-descriptions__navigation-link" data-id="5">Хорватия</a>
           </li>
         </ul>
+      </div>
 
         <ul class="place-descriptions__list list">
           <li class="place-descriptions__item place-descriptions__item--active" id="greece">
@@ -347,7 +349,7 @@
           <div class="prices__contact-wrapper">
             <p class=" prices__contact text">Свяжитесь с нами</p>
             <a class="prices__link" href="tel:+749978468446">
-              <svg class="prices__svg" width="17" height="24">
+              <svg class="prices__svg phone-svg" width="17" height="24">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
               +7 (499) -784-684-46
@@ -456,7 +458,7 @@
           </li>
           <li class="contacts__item">
             <a class="contacts__link contacts__link--tel" href="tel:+749978468446">
-              <svg class="contacts__svg contacts__svg--tel" width="17" height="24">
+              <svg class="contacts__svg contacts__svg--tel phone-svg" width="17" height="24">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
               +7 (499) -784-684-46

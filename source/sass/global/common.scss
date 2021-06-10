@@ -1,10 +1,14 @@
 .container {
   max-width: $max-desktop;
   margin: 0 auto;
+  padding-left: 137px;
+  padding-right: 137px;
 
   @media (max-width: $max-tablet) {
     min-width: $min-tablet;
     max-width: $max-tablet;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (max-width: $max-mobile) {
@@ -130,4 +134,8 @@
     background-color: var(--orange);
     outline: 1px solid white;
   }
+}
+
+.phone-svg {
+  fill:var(--transparent);
 }
