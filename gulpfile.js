@@ -54,6 +54,18 @@ const html = () => {
 
 exports.html = html;
 
+//Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename(path => path.basename += ".min"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
+
 // Images
 
 const images = () => {
@@ -139,6 +151,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -167,7 +180,8 @@ exports.default = gulp.series(
     html,
     sprite,
     copy,
-    createWebp
+    createWebp,
+    // scripts
   ),
   gulp.series(
     server,

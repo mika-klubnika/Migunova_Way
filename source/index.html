@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Путешествие по Европе">
+  <link rel="icon" sizes="16x16" href="../favicon.png" type="image/png">
   <title>Путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -20,22 +21,20 @@
       <a class="navigation__logo">
         <img class="navigation__logo-img" src="img/logo.png" alt="Логотип сайта Путешествие по Европе" width="57" height="22">
       </a>
-      <button class="navigation__open" type="button" aria-label="Открыть меню"></button>
+      <button class="navigation__toggle" type="button" aria-label="Открыть меню"></button>
 
-      <ul class="navigation__list list">
-        <button class="navigation__close" type="button" aria-label="Закрыть меню"></button>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#places">О&#160;путешествии</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#prices">Цены</a>
-        </li>
-      </ul>
+        <ul class="navigation__list list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#places">О&#160;путешествии</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#prices">Цены</a>
+          </li>
+        </ul>
 
       <a class="navigation__link navigation__link--phone" href="tel:+749978468446" aria-label="Телефон для связи">
-        <svg class="navigation__svg" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z" stroke="#141517" stroke-width="2" stroke-miterlimit="10" />
+        <svg class="navigation__svg phone-svg" width="17" height="24">
+          <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
         +7 (499) -784-684-46
       </a>
@@ -48,14 +47,13 @@
     <section class="banner">
       <div class="container container--banner">
         <div class="banner__wrapper">
-          <h2 class="banner__title text">Путешествие&#160;<br class="banner__transfer"> по&#160; <br class="banner__transfer--mobile"> Европе</h2>
+          <h2 class="banner__title title text">Путешествие&#160;<br class="banner__transfer"> по&#160; <br class="banner__transfer--mobile"> Европе</h2>
           <div class="banner__inner">
             <p class="banner__text text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
             <a class="banner__link button button--flex" href="#countries">
               <span>смотреть тур</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M15 8L8 15L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg class="banner__svg" width="16" height="16">
+                <use xlink:href="img/sprite.svg#arrow"></use>
               </svg>
             </a>
           </div>
@@ -65,8 +63,10 @@
 
     <div class="container">
       <section class="places" id="places">
+        <div class="places__wrapper-text">
         <h2 class="places__title title text">Места&#160; <br class="places__transfer"> посещения</h2>
         <p class="places__text text">Вы можете выбрать полный тур или<br> частичный, с посещением первых 3 мест</p>
+      </div>
 
         <ul class="places__list list">
           <li class="places__item">
@@ -76,7 +76,7 @@
                   <source type="image/webp" srcset="img/greece.webp 1x, img/greece@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/greece-tablet.jpg 1x, img/greece-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/greec.jpg" srcset="img/greece@2x.jpg 2x" alt="фото Греции" width="350" height="430">
+                  <img class="places__img image" src="img/greec.jpg" srcset="img/greece@2x.jpg 2x" alt="фото Греции" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Греция</figcaption>
@@ -91,7 +91,7 @@
                   <source type="image/webp" srcset="img/albania.webp 1x, img/albania@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/albania-tablet.jpg 1x, img/albania-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/albania.jpg" srcset="img/albania@2x.jpg 2x" alt="фото Албании" width="350" height="430">
+                  <img class="places__img image" src="img/albania.jpg" srcset="img/albania@2x.jpg 2x" alt="фото Албании" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Албания</figcaption>
@@ -106,7 +106,7 @@
                   <source type="image/webp" srcset="img/macedonia.webp 1x, img/macedonia@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/macedonia-tablet.jpg 1x, img/macedonia-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/macedonia.jpg" srcset="img/macedonia@2x.jpg 2x" alt="фото Македонии" width="350" height="430">
+                  <img class="places__img image" src="img/macedonia.jpg" srcset="img/macedonia@2x.jpg 2x" alt="фото Македонии" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Македония</figcaption>
@@ -121,7 +121,7 @@
                   <source type="image/webp" srcset="img/montenegro.webp 1x, img/montenegro@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/montenegro-tablet.jpg 1x, img/montenegro-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/montenegro.jpg" srcset="img/montenegro@2x.jpg 2x" alt="фото Черногории" width="350" height="430">
+                  <img class="places__img image" src="img/montenegro.jpg" srcset="img/montenegro@2x.jpg 2x" alt="фото Черногории" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Черногория</figcaption>
@@ -136,7 +136,7 @@
                   <source type="image/webp" srcset="img/croatia.webp 1x, img/croatia@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/croatia-tablet.jpg 1x, img/croatia-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/croatia.jpg" srcset="img/croatia@2x.jpg 2x" alt="фото Хорватии" width="350" height="430">
+                  <img class="places__img image" src="img/croatia.jpg" srcset="img/croatia@2x.jpg 2x" alt="фото Хорватии" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Хорватия</figcaption>
@@ -149,26 +149,28 @@
       <section class="place-descriptions" id="countries">
         <h2 class="visually-hidden">Описание мест посещения</h2>
 
+        <div class="place-descriptions__navigation-wrapper">
         <ul class="place-descriptions__navigation list">
-          <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link place-descriptions__navigation-link--active" href="#">Греция</a>
+          <li class="place-descriptions__navigation-item" tabindex="0">
+            <a class="place-descriptions__navigation-link place-descriptions__navigation-link--active" data-id="1">Греция</a>
           </li>
-          <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Албания</a>
+          <li class="place-descriptions__navigation-item" tabindex="0">
+            <a class="place-descriptions__navigation-link" data-id="2">Албания</a>
           </li>
-          <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Македония</a>
+          <li class="place-descriptions__navigation-item" tabindex="0">
+            <a class="place-descriptions__navigation-link" data-id="3">Македония</a>
           </li>
-          <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Черногория</a>
+          <li class="place-descriptions__navigation-item" tabindex="0">
+            <a class="place-descriptions__navigation-link" data-id="4">Черногория</a>
           </li>
-          <li class="place-descriptions__navigation-item">
-            <a class="place-descriptions__navigation-link" href="#">Хорватия</a>
+          <li class="place-descriptions__navigation-item" tabindex="0">
+            <a class="place-descriptions__navigation-link" data-id="5">Хорватия</a>
           </li>
         </ul>
+      </div>
 
         <ul class="place-descriptions__list list">
-          <li class="place-descriptions__item" id="greece">
+          <li class="place-descriptions__item place-descriptions__item--active" id="greece">
             <div class="place-descriptions__wrapper-text">
               <h3 class="place-descriptions__title title text">Греция</h3>
               <p class="place-descriptions__text text">На севере Греции находится один из крупнейших комплексов монастырей,
@@ -195,7 +197,10 @@
                 Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах.
                 Ощущение такое, как будто стоишь на краю света!</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-greece.jpg" srcset="img/avatar-greece@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-greece.webp 1x, img/avatar-greece@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-greece.jpg" srcset="img/avatar-greece@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Влада Голицина</cite>
               </div>
             </blockquote>
@@ -226,7 +231,10 @@
               <p class="place-descriptions__review-text text">Замечательный курорт, обязательно стоит посетить. В
                 следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-albania.jpg" srcset="img/avatar-albania@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-albania.webp 1x, img/avatar-albania@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-albania.jpg" srcset="img/avatar-albania@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Маришка</cite>
               </div>
             </blockquote>
@@ -258,7 +266,10 @@
                 разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота
                 природы впечатлила, особенно после долгого пути в гору.</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-macedonia.jpg" srcset="img/avatar-macedonia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-macedonia.webp 1x, img/avatar-macedonia@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-macedonia.jpg" srcset="img/avatar-macedonia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Михаил Кузьмин</cite>
               </div>
             </blockquote>
@@ -286,7 +297,10 @@
               <h4 class="place-descriptions__review text">Отзывы</h4>
               <p class="place-descriptions__review-text text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-montenegro.jpg" srcset="img/avatar-montenegro@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-montenegro.webp 1x, img/avatar-montenegro@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-montenegro.jpg" srcset="img/avatar-montenegro@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Анастасия Мей</cite>
               </div>
             </blockquote>
@@ -317,7 +331,10 @@
                 незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не
                 верилось, но натур ни с чем не спутать по итогу :)</p>
               <div class="place-descriptions__review-author-wrapper">
-                <img class="place-descriptions__review-author-avatar" src="img/avatar-croatia.jpg" srcset="img/avatar-croatia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-croatia.webp 1x, img/avatar-croatia@2x.webp 2x">
+                  <img class="place-descriptions__review-author-avatar" src="img/avatar-croatia.jpg" srcset="img/avatar-croatia@2x.jpg 2x" alt="Аватарка" width="37" height="38">
+                </picture>
                 <cite class="place-descriptions__review-author">Владимир Мулицин</cite>
               </div>
             </blockquote>
@@ -334,9 +351,8 @@
           <div class="prices__contact-wrapper">
             <p class=" prices__contact text">Свяжитесь с нами</p>
             <a class="prices__link" href="tel:+749978468446">
-              <svg class="prices__svg" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z" stroke="#FE7865" stroke-width="2" stroke-miterlimit="10" />
+              <svg class="prices__svg phone-svg" width="17" height="24">
+                <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
               +7 (499) -784-684-46
             </a>
@@ -387,7 +403,7 @@
           <form class="form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="form__wrapper">
               <label class="form__label form__label--tel" for="phone">
-                <input class="form__input form__input--tel" type="tel" name="phone" id="phone" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" placeholder="+7 Введите 10 цифр номера" required>
+                <input class="form__input form__input--tel" type="tel" name="phone" id="phone" placeholder="+7 Введите 10 цифр номера" required>
               </label>
 
               <label class="form__label" for="email">
@@ -436,18 +452,16 @@
         <ul class="contacts__list list">
           <li class="contacts__item">
             <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">
-              <svg class="contacts__svg contacts__svg--email" width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24.2273 0H1.77273C0.768182 0 0 0.764706 0 1.76471V18.2353C0 19.2353 0.768182 20 1.77273 20H24.2273C25.2318 20 26 19.2353 26 18.2353V1.76471C26 0.764706 25.2318 0 24.2273 0ZM24.2273 17L19.5591 12.3529C19.2045 12 18.6727 12 18.3182 12.3529C17.9636 12.7059 17.9636 13.2353 18.3182 13.5882L22.9864 18.2353H3.01362L7.68182 13.5882C8.03636 13.2353 8.03636 12.7059 7.68182 12.3529C7.32727 12 6.79547 12 6.44092 12.3529L1.77273 17V5.70585L12.4091 13.7059C12.5864 13.8236 12.7636 13.8823 12.9409 13.8823C13.1182 13.8823 13.2954 13.8236 13.4727 13.7059L24.2273 5.70585V17ZM24.2273 1.76471V3.4706L12.9409 11.8235L1.77273 3.4706V1.76471H24.2273Z" fill="#D7D9DF" />
+              <svg class="contacts__svg contacts__svg--email" width="26" height="20">
+                <use xlink:href="img/sprite.svg#email"></use>
               </svg>
               puteshestviemechta@gmail.ru
             </a>
           </li>
           <li class="contacts__item">
             <a class="contacts__link contacts__link--tel" href="tel:+749978468446">
-              <svg class="contacts__svg contacts__svg--tel" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z" stroke="#D7D9DF" stroke-width="2" stroke-miterlimit="10" />
+              <svg class="contacts__svg contacts__svg--tel phone-svg" width="17" height="24">
+                <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
               +7 (499) -784-684-46
             </a>
@@ -474,13 +488,15 @@
           <h3 class="modal__title text">Купить тур</h3>
 
           <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST">
-            <label class="form__label form__label--tel" for="phone">
-              <input class="form__input form__input--tel form__input--modal" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 Введите 10 цифр номера">
+            <div class="form__wrapper form__wrapper--modal">
+            <label class="form__label form__label--tel" for="tel">
+              <input class="form__input form__input--tel form__input--modal" type="tel" name="tel" id="tel" placeholder="+7 Введите 10 цифр номера" required>
             </label>
 
-            <label class="form__label" for="email">
-              <input class="form__input form__input--modal" type="email" name="email" id="email" placeholder="E-mail">
+            <label class="form__label" for="mail">
+              <input class="form__input form__input--modal" type="email" name="mail" id="mail" placeholder="E-mail">
             </label>
+          </div>
 
             <button class="form__button form__button--modal button" type="submit">отправить</button>
           </form>
@@ -489,7 +505,6 @@
     </div>
   </section>
 
-  <template id="success">
     <section class="success">
       <div class="success__base">
         <div class="success__wrapper">
@@ -497,12 +512,12 @@
           <button class="success__close" type="button" aria-label="Закрыть окно"></button>
         </div>
       </div>
-      </div>
     </section>
-  </template>
 
   <script src="js/menu.js"></script>
+  <script src="js/tabs.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

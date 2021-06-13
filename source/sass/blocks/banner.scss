@@ -6,12 +6,12 @@
 
   background-color: var(--background);
 
-  background-image: url(../img/background-banner.jpg);
+  background-image: url("../img/background-banner.jpg");
   background-size: cover;
   background-position: center center;
 
   @media (min-resolution: $resolution) {
-    background-image: url(../img/background-banner@2x.jpg);
+    background-image: url("../img/background-banner@2x.jpg");
   }
 
   @media (max-width: $max-tablet) {
@@ -19,10 +19,10 @@
     min-height: 344px;
     padding-top: 60px;
 
-    background-image: url(../img/background-banner-tablet.jpg);
+    background-image: url("../img/background-banner-tablet.jpg");
 
     @media (min-resolution: $resolution) {
-      background-image: url(../img/background-banner-tablet@2x.jpg);
+      background-image: url("../img/background-banner-tablet@2x.jpg");
     }
   }
 
@@ -32,17 +32,17 @@
     padding-top: 81px;
     margin-bottom: 200px;
 
-    background-image: url(../img/background-banner-mobile.jpg);
+    background-image: url("../img/background-banner-mobile.jpg");
 
     @media (min-resolution: $resolution) {
-      background-image: url(../img/background-banner-mobile@2x.jpg);
+      background-image: url("../img/background-banner-mobile@2x.jpg");
     }
   }
 }
 
 .banner__wrapper {
   width: min-content;
-  margin-right: 97px;
+  margin-right: 75px;
 
   @media (max-width: $max-tablet) {
     margin: 0 auto;
@@ -55,21 +55,17 @@
 
 .banner__title {
   margin-bottom: 30px;
-  font-weight: 600;
-  font-size: 55px;
+
   line-height: 80px;
   letter-spacing: -1.11px;
+  color: var(--white);
 
   @media (max-width: $max-tablet) {
     margin-bottom: 15px;
-    font-size: 30px;
+
     line-height: 150%;
     letter-spacing: 0;
     text-align: center;
-  }
-
-  @media (max-width: $max-mobile) {
-    font-size: 24px;
   }
 }
 
@@ -146,4 +142,8 @@
   @media (max-width: $max-mobile) {
     width: 288px;
   }
+}
+
+.banner__svg {
+  fill: var(--transparent);
 }
