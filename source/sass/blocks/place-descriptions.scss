@@ -1,8 +1,7 @@
 .place-descriptions {
   position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
   margin-bottom: 100px;
+  padding-top: 45px;
 
   @media (max-width: $max-tablet) {
     padding-top: 78px;
@@ -16,7 +15,7 @@
   }
 
   &::after {
-    content: url(../img/background-map.svg);
+    content: url("../img/background-map.svg");
     position: absolute;
     top: 140px;
     left: 50%;
@@ -29,47 +28,34 @@
   }
 }
 
-.place-descriptions__navigation {
-  display: flex;
-  margin-bottom: 90px;
-  padding-bottom: 9px;
-  width: min-content;
-  border-bottom: 2px solid var(--gray-03);
+.place-descriptions__navigation-wrapper {
+  overflow-x: auto;
+  margin-bottom: 80px;
 
   @media (max-width: $max-tablet) {
     margin-bottom: 34px;
     margin-left: 37px;
+    margin-right: 37px;
   }
 
   @media (max-width: $max-mobile) {
     margin-bottom: 24px;
     margin-left: 15px;
+    margin-right: 15px;
   }
+}
+
+
+.place-descriptions__navigation {
+  display: flex;
+  padding-bottom: 9px;
+  width: fit-content;
+  border-bottom: 2px solid var(--gray-03);
 }
 
 .place-descriptions__navigation-item {
   &:not(:last-child) {
     margin-right: 100px;
-  }
-
-  @media (max-width: $max-tablet) {
-    &:last-child {
-      display: none;
-    }
-
-    &:nth-child(4) {
-      margin-right: 0;
-    }
-  }
-
-  @media (max-width: $max-mobile) {
-    &:nth-child(n + 3) {
-      display: none;
-    }
-
-    &:nth-child(2) {
-      margin-right: 0;
-    }
   }
 }
 
@@ -79,6 +65,7 @@
   line-height: 24px;
   letter-spacing: -0.41px;
   color: var(--gray-03);
+  cursor: pointer;
 
   &--active {
     color: var(--coral);
@@ -87,11 +74,12 @@
 
 .place-descriptions__item {
   position: relative;
-  display: flex;
+  display: none;
   padding-right: 270px;
 
-  &:not(:first-child) {
-    display: none;
+  &--active {
+    display: flex;
+    justify-content: space-between;
   }
 
   @media (max-width: $max-tablet) {
@@ -101,8 +89,8 @@
 }
 
 .place-descriptions__wrapper-text {
-  min-width: 370px;
-  padding-right: 100px;
+  align-self: center;
+  max-width: 370px;
 
   @media (max-width: $max-tablet) {
     min-width: 760px;
@@ -168,11 +156,11 @@
 
 .place-descriptions__review-block {
   position: absolute;
-  top: 105px;
+  top: 115px;
   right: 0;
 
   width: 382px;
-  height: 367px;
+  min-height: 290px;
 
   padding: 30px;
   margin: 0;
@@ -180,7 +168,7 @@
   background-color: var(--white);
 
   @media (max-width: $max-tablet) {
-    top: 55%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -223,7 +211,7 @@
     height: 1px;
     background-color: var(--coral);
 
-    @media (max-width: $max-mobile)  {
+    @media (max-width: $max-mobile) {
       left: 81px;
       bottom: -13px;
     }
@@ -232,7 +220,6 @@
 
 .place-descriptions__review-text {
   font-size: 14px;
-  line-height: 28px;
   letter-spacing: -0.41px;
 
   margin-bottom: 35px;

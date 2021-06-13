@@ -1,10 +1,14 @@
 .container {
   max-width: $max-desktop;
   margin: 0 auto;
+  padding-left: 137px;
+  padding-right: 137px;
 
   @media (max-width: $max-tablet) {
     min-width: $min-tablet;
     max-width: $max-tablet;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (max-width: $max-mobile) {
@@ -24,8 +28,6 @@
   &--footer {
     display: grid;
     grid-template-columns: 402px 390px 370px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     @media (max-width: $max-tablet) {
       grid-template-columns: 408px 350px;
@@ -125,7 +127,16 @@
     line-height: 12px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--orange);
   }
+}
+
+.image {
+  vertical-align: middle;
+}
+
+.phone-svg {
+  fill: var(--transparent);
 }
