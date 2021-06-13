@@ -16,6 +16,10 @@
   @media (max-width: $big-mobile) {
     justify-content: center;
   }
+
+  &--modal {
+    flex-direction: column;
+  }
 }
 
 .form__label {

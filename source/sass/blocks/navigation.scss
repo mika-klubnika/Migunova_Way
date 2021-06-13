@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding-top: 37px;
+  padding-top: 38px;
 
   @media (max-width: $max-tablet) {
     padding-top: 19px;
@@ -140,9 +140,14 @@
     padding-top: 140px;
 
     width: 100vw;
-    min-height: 568px;
+    min-height: 450px;
 
-    background-color: white;
+    background-color: var(--white);
+    box-shadow: 0 4px 30px var(--dark-01);
+  }
+
+  @media (max-width: $max-mobile) {
+    min-height: 520px;
   }
 }
 
@@ -199,7 +204,7 @@
     font-size: 20px;
     line-height: 140%;
 
-    color: var(--dark-gray)
+    color: var(--dark-gray);
   }
 
   &--phone {

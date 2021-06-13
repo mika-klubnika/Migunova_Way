@@ -1,6 +1,7 @@
 .prices {
   display: flex;
-  padding-top: 125px;
+  justify-content: space-between;
+  padding-top: 130px;
 
   @media (max-width: $max-tablet) {
     flex-direction: column;
@@ -15,12 +16,11 @@
 
 .prices__info-wrapper {
   order: 2;
-  padding-left: 112px;
+  width: 300px;
 
   @media (max-width: $max-tablet) {
     order: 1;
     min-width: 760px;
-    margin-bottom: 30px;
     margin-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;

@@ -1,6 +1,7 @@
 .place-descriptions {
   position: relative;
   margin-bottom: 100px;
+  padding-top: 45px;
 
   @media (max-width: $max-tablet) {
     padding-top: 78px;
@@ -14,7 +15,7 @@
   }
 
   &::after {
-    content: url(../img/background-map.svg);
+    content: url("../img/background-map.svg");
     position: absolute;
     top: 140px;
     left: 50%;
@@ -29,7 +30,7 @@
 
 .place-descriptions__navigation-wrapper {
   overflow-x: auto;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 
   @media (max-width: $max-tablet) {
     margin-bottom: 34px;
@@ -78,6 +79,7 @@
 
   &--active {
     display: flex;
+    justify-content: space-between;
   }
 
   @media (max-width: $max-tablet) {
@@ -87,8 +89,8 @@
 }
 
 .place-descriptions__wrapper-text {
-  min-width: 370px;
-  padding-right: 100px;
+  align-self: center;
+  max-width: 370px;
 
   @media (max-width: $max-tablet) {
     min-width: 760px;
@@ -154,7 +156,7 @@
 
 .place-descriptions__review-block {
   position: absolute;
-  top: 105px;
+  top: 115px;
   right: 0;
 
   width: 382px;
@@ -218,7 +220,6 @@
 
 .place-descriptions__review-text {
   font-size: 14px;
-  line-height: 28px;
   letter-spacing: -0.41px;
 
   margin-bottom: 35px;

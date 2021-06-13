@@ -1,13 +1,26 @@
+'use strict'
+
 const forms = document.querySelectorAll('.form');
-const main = document.querySelector('main');
+const success = document.querySelector('.success')
+const successClose = document.querySelector('.success__close')
 
-const showMessage = name => {
-  modal.classList.add('hidden');
-  const node = document.querySelector(`#${name}`).content.cloneNode(true)
-  main.appendChild(node)
-};
 
-[...forms].forEach(form => form.addEventListener('submit', evt => {
+forms.forEach(form => form.addEventListener('submit', evt => {
   evt.preventDefault();
-  showMessage('success')
+  modal.classList.add('hidden');
+  success.classList.add('success--show');
 }));
+
+successClose.addEventListener('click', evt => {
+  evt.preventDefault();
+  success.classList.remove('success--show');
+});
+
+window.addEventListener('keydown', evt => {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (success.classList.contains('success--show')) {
+      success.classList.toggle('success--show');
+    }
+  }
+});

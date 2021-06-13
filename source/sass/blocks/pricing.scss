@@ -11,7 +11,6 @@
   @media (max-width: $max-mobile) {
     padding-left: 15px;
     padding-right: 15px;
-
   }
 
   @media (max-width: $closer-tablet) {
@@ -76,7 +75,7 @@
   }
 
   &:hover .advantages__item::before {
-    background-image: url(../img/arrow-black.svg);
+    background-image: url("../img/arrow-black.svg");
   }
 
   &:hover .pricing__link {

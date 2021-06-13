@@ -1,3 +1,11 @@
+.success {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
+
 .success__base {
   position: fixed;
   z-index: 4;
@@ -24,7 +32,7 @@
   height: 444px;
 
   background-color: var(--gray);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .success__close {

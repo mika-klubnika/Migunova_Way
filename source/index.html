@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Путешествие по Европе">
-  <link rel="shortcut icon" sizes="16x16" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="../favicon.png" type="image/png">
   <title>Путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -47,7 +47,7 @@
     <section class="banner">
       <div class="container container--banner">
         <div class="banner__wrapper">
-          <h2 class="banner__title text">Путешествие&#160;<br class="banner__transfer"> по&#160; <br class="banner__transfer--mobile"> Европе</h2>
+          <h2 class="banner__title title text">Путешествие&#160;<br class="banner__transfer"> по&#160; <br class="banner__transfer--mobile"> Европе</h2>
           <div class="banner__inner">
             <p class="banner__text text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
             <a class="banner__link button button--flex" href="#countries">
@@ -63,18 +63,20 @@
 
     <div class="container">
       <section class="places" id="places">
+        <div class="places__wrapper-text">
         <h2 class="places__title title text">Места&#160; <br class="places__transfer"> посещения</h2>
         <p class="places__text text">Вы можете выбрать полный тур или<br> частичный, с посещением первых 3 мест</p>
+      </div>
 
         <ul class="places__list list">
-          <li class="places__item" tabindex="0">
+          <li class="places__item">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet.webp 1x, img/greece-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/greece.webp 1x, img/greece@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/greece-tablet.jpg 1x, img/greece-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/greec.jpg" srcset="img/greece@2x.jpg 2x" alt="фото Греции" width="350" height="430">
+                  <img class="places__img image" src="img/greec.jpg" srcset="img/greece@2x.jpg 2x" alt="фото Греции" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Греция</figcaption>
@@ -82,14 +84,14 @@
               <a class="places__more" href="#greece">смотреть подробнее</a>
           </li>
 
-          <li class="places__item" tabindex="0">
+          <li class="places__item">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet.webp 1x, img/albania-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/albania.webp 1x, img/albania@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/albania-tablet.jpg 1x, img/albania-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/albania.jpg" srcset="img/albania@2x.jpg 2x" alt="фото Албании" width="350" height="430">
+                  <img class="places__img image" src="img/albania.jpg" srcset="img/albania@2x.jpg 2x" alt="фото Албании" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Албания</figcaption>
@@ -97,14 +99,14 @@
               <a class="places__more" href="#albania">смотреть подробнее</a>
           </li>
 
-          <li class="places__item" tabindex="0">
+          <li class="places__item">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet.webp 1x, img/macedonia-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/macedonia.webp 1x, img/macedonia@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/macedonia-tablet.jpg 1x, img/macedonia-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/macedonia.jpg" srcset="img/macedonia@2x.jpg 2x" alt="фото Македонии" width="350" height="430">
+                  <img class="places__img image" src="img/macedonia.jpg" srcset="img/macedonia@2x.jpg 2x" alt="фото Македонии" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Македония</figcaption>
@@ -112,14 +114,14 @@
               <a class="places__more" href="#macedonia">смотреть подробнее</a>
           </li>
 
-          <li class="places__item" tabindex="0">
+          <li class="places__item">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet.webp 1x, img/montenegro-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/montenegro.webp 1x, img/montenegro@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/montenegro-tablet.jpg 1x, img/montenegro-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/montenegro.jpg" srcset="img/montenegro@2x.jpg 2x" alt="фото Черногории" width="350" height="430">
+                  <img class="places__img image" src="img/montenegro.jpg" srcset="img/montenegro@2x.jpg 2x" alt="фото Черногории" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Черногория</figcaption>
@@ -127,14 +129,14 @@
               <a class="places__more" href="#montenegro">смотреть подробнее</a>
           </li>
 
-          <li class="places__item" tabindex="0">
+          <li class="places__item">
               <figure class="places__figure">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet.webp 1x, img/croatia-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/croatia.webp 1x, img/croatia@2x.webp 2x">
 
                   <source media="(max-width: 1023px)" srcset="img/croatia-tablet.jpg 1x, img/croatia-tablet@2x.jpg 2x">
-                  <img class="places__img" src="img/croatia.jpg" srcset="img/croatia@2x.jpg 2x" alt="фото Хорватии" width="350" height="430">
+                  <img class="places__img image" src="img/croatia.jpg" srcset="img/croatia@2x.jpg 2x" alt="фото Хорватии" width="350" height="430">
                 </picture>
 
                 <figcaption class="places__subtitle">Хорватия</figcaption>
@@ -401,7 +403,7 @@
           <form class="form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="form__wrapper">
               <label class="form__label form__label--tel" for="phone">
-                <input class="form__input form__input--tel" type="tel" name="phone" id="phone" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" placeholder="+7 Введите 10 цифр номера">
+                <input class="form__input form__input--tel" type="tel" name="phone" id="phone" placeholder="+7 Введите 10 цифр номера" required>
               </label>
 
               <label class="form__label" for="email">
@@ -486,13 +488,15 @@
           <h3 class="modal__title text">Купить тур</h3>
 
           <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST">
-            <label class="form__label form__label--tel" for="phone">
-              <input class="form__input form__input--tel form__input--modal" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 Введите 10 цифр номера">
+            <div class="form__wrapper form__wrapper--modal">
+            <label class="form__label form__label--tel" for="tel">
+              <input class="form__input form__input--tel form__input--modal" type="tel" name="tel" id="tel" placeholder="+7 Введите 10 цифр номера" required>
             </label>
 
-            <label class="form__label" for="email">
-              <input class="form__input form__input--modal" type="email" name="email" id="email" placeholder="E-mail">
+            <label class="form__label" for="mail">
+              <input class="form__input form__input--modal" type="email" name="mail" id="mail" placeholder="E-mail">
             </label>
+          </div>
 
             <button class="form__button form__button--modal button" type="submit">отправить</button>
           </form>
@@ -501,7 +505,6 @@
     </div>
   </section>
 
-  <template id="success">
     <section class="success">
       <div class="success__base">
         <div class="success__wrapper">
@@ -510,7 +513,6 @@
         </div>
       </div>
     </section>
-  </template>
 
   <script src="js/menu.js"></script>
   <script src="js/tabs.js"></script>

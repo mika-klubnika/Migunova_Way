@@ -28,8 +28,6 @@
   &--footer {
     display: grid;
     grid-template-columns: 402px 390px 370px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     @media (max-width: $max-tablet) {
       grid-template-columns: 408px 350px;
@@ -132,10 +130,13 @@
   &:hover,
   &:focus {
     background-color: var(--orange);
-    outline: 1px solid white;
   }
 }
 
+.image {
+  vertical-align: middle;
+}
+
 .phone-svg {
-  fill:var(--transparent);
+  fill: var(--transparent);
 }

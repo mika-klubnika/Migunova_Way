@@ -8,13 +8,18 @@
 
   @media (max-width: $max-mobile) {
     padding-top: 105px;
-    padding-right: 16px;
-    padding-left: 16px;
+  }
+}
+
+.places__wrapper-text {
+  @media (max-width: $max-mobile) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
 .places__title {
-  margin-bottom: 68px;
+  margin-bottom: 65px;
   line-height: 80px;
 
   &::after {
@@ -41,7 +46,7 @@
 }
 
 .places__text {
-  margin-bottom: 56px;
+  margin-bottom: 7px;
   letter-spacing: -0.47px;
 
   @media (max-width: $max-tablet) {
@@ -72,49 +77,15 @@
 
 .places__item {
   position: relative;
-  margin: 45px 30px;
-  // margin-bottom: 90px;
+  margin: 50px 30px;
 
-  // &:not(:nth-child(3n)) {
-  //   margin-right: 60px;
-
-  //   @media (max-width: $min-desktop) {
-  //     margin-right: 0;
-  //   }
-  // }
-
-  // &:not(:nth-child(2n)) {
-
-  //   @media (max-width: $min-desktop) {
-  //     margin-right: 30px;
-  //   }
-
-  //   @media (max-width: $max-mobile) {
-  //     margin-right: 0;
-  //   }
-  // }
-
-  // &:nth-child(5) {
-  //   margin-left: 60px;
-  //   margin-right: 0;
-
-  //   @media (max-width: $max-tablet) {
-  //     margin-left: 0;
-  //     margin-top: 10px;
-  //   }
-
-  //   @media (max-width: $max-mobile) {
-  //     margin-top: 0;
-  //   }
-  // }
-
-  // @media (max-width: $max-tablet) {
-  //   margin-bottom: 12px;
-  // }
+  @media (max-width: $max-tablet) {
+    margin: 10px 13px;
+  }
 
   @media (max-width: $max-mobile) {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   &::after {
@@ -124,7 +95,7 @@
   }
 
   &:hover::after,
-  &:focus::after {
+  &:focus-within::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -139,7 +110,7 @@
   }
 
   &:hover .places__more,
-  &:focus .places__more {
+  &:focus-within .places__more {
     z-index: 3;
     opacity: 1;
   }
@@ -158,7 +129,6 @@
     width: 288px;
     height: 425px;
   }
-
 }
 
 .places__subtitle {
@@ -216,7 +186,7 @@
   }
 
   &:hover,
-  &:focus-within {
+  &:focus {
     background-color: var(--white-04);
   }
 }
