@@ -41,7 +41,16 @@
 }
 
 .banner__wrapper {
-  width: min-content;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: $max-tablet) {
+    justify-content: center;
+  }
+}
+
+.banner__text-wrapper {
+  max-width: 400px;
   margin-right: 75px;
 
   @media (max-width: $max-tablet) {
@@ -49,7 +58,7 @@
   }
 
   @media (max-width: $max-mobile) {
-    position: relative;
+    max-width: 100%;
   }
 }
 
@@ -82,19 +91,17 @@
 }
 
 .banner__inner {
-  width: 90%;
+  margin-right: 20px;
 
   @media (max-width: $max-tablet) {
-    width: 102%;
     margin: 0 auto;
   }
 
   @media (max-width: $max-mobile) {
-    position: absolute;
-    min-width: 288px;
-    top: 174px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: 225px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -118,14 +125,6 @@
 .banner__transfer-text {
   @media (max-width: $max-tablet) {
     display: none;
-  }
-}
-
-.banner__transfer-tablet {
-  display: none;
-
-  @media (max-width: $max-tablet) {
-    display: block;
   }
 }
 

@@ -29,11 +29,16 @@
 }
 
 $max-desktop: 1445px;
-$min-desktop: 1207px;
+$min-desktop: 1205px;
+
 $min-tablet: 768px;
-$max-tablet: 1023px;
+$max-tablet: 1024px;
+$big-tablet: 1320px;
+
+$closer-tablet: 650px;
+
 $min-mobile: 320px;
 $max-mobile: 767px;
-$closer-tablet: 650px;
 $big-mobile: 584px;
+
 $resolution: 2dppx;

@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding-top: 130px;
+  padding-bottom: 50px;
 
-  @media (max-width: $max-tablet) {
+  @media (max-width: $big-tablet) {
     flex-direction: column;
     padding-top: 33px;
     padding-left: 0;
@@ -16,9 +17,9 @@
 
 .prices__info-wrapper {
   order: 2;
-  width: 300px;
+  padding-left: 10px;
 
-  @media (max-width: $max-tablet) {
+  @media (max-width: $big-tablet) {
     order: 1;
     min-width: 760px;
     margin-bottom: 30px;
@@ -44,17 +45,25 @@
     height: 3px;
   }
 
+  @media (max-width: $big-tablet) {
+    &::after {
+      display: none;
+    }
+  }
+
   @media (max-width: $max-tablet) {
     margin-top: 0;
   }
 }
 
 .prices__text {
+  max-width: 300px;
   margin-top: 48px;
   line-height: 170%;
 
-  @media (max-width: $max-tablet) {
+  @media (max-width: $big-tablet) {
     margin-top: 20px;
+    max-width: 100%;
   }
 }
 
@@ -92,6 +101,7 @@
   font-size: 20px;
   line-height: 32px;
   color: var(--black);
+  white-space: nowrap;
 
   &:hover {
     color: var(--coral);

@@ -1,5 +1,3 @@
-'use strict'
-
 const forms = document.querySelectorAll('.form');
 const success = document.querySelector('.success')
 const successClose = document.querySelector('.success__close')

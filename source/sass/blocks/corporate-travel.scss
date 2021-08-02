@@ -1,7 +1,7 @@
 .corporate-travel {
   padding-left: 49px;
 
-  @media (max-width: $max-tablet) {
+  @media (max-width: $big-tablet) {
     grid-column: 1/3;
     padding-top: 35px;
     padding-left: 0;
@@ -21,7 +21,7 @@
   line-height: 170%;
   color: var(--gray-05);
 
-  @media (max-width: $max-tablet) {
+  @media (max-width: $big-tablet) {
     width: 95%;
     padding-left: 27px;
   }

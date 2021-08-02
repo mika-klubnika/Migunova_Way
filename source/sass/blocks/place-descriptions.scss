@@ -3,7 +3,7 @@
   margin-bottom: 100px;
   padding-top: 45px;
 
-  @media (max-width: $max-tablet) {
+  @media (max-width: $min-tablet) {
     padding-top: 78px;
     margin-bottom: 72px;
     padding-right: 0;
@@ -12,19 +12,6 @@
 
   @media (max-width: $max-mobile) {
     padding-top: 5px;
-  }
-
-  &::after {
-    content: url("../img/background-map.svg");
-    position: absolute;
-    top: 140px;
-    left: 50%;
-    z-index: -1;
-    transform: translateX(-50%);
-
-    @media (max-width: $max-tablet) {
-      display: none;
-    }
   }
 }
 
@@ -75,11 +62,9 @@
 .place-descriptions__item {
   position: relative;
   display: none;
-  padding-right: 270px;
 
   &--active {
     display: flex;
-    justify-content: space-between;
   }
 
   @media (max-width: $max-tablet) {
@@ -91,12 +76,17 @@
 .place-descriptions__wrapper-text {
   align-self: center;
   max-width: 370px;
+  margin-right: 100px;
 
   @media (max-width: $max-tablet) {
     min-width: 760px;
+    max-width: 100%;
+
     margin-bottom: 30px;
+    margin-right: 0;
     padding-left: 20px;
     padding-right: 20px;
+
     text-align: center;
   }
 
@@ -145,6 +135,7 @@
 }
 
 .place-descriptions__img {
+  display: flex;
   width: 430px;
   height: 596px;
 
@@ -168,14 +159,13 @@
   background-color: var(--white);
 
   @media (max-width: $max-tablet) {
-    top: 60%;
+    top: initial;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  @media (max-width: $max-mobile) {
-    top: 62%;
-
+  @media (max-width: $big-mobile) {
     width: 268px;
     height: 431px;
     padding: 20px;
@@ -196,7 +186,7 @@
 
   color: var(--grayish);
 
-  @media (max-width: $max-mobile) {
+  @media (max-width: $big-mobile) {
     margin-bottom: 33px;
     font-size: 20px;
     line-height: 24px;
@@ -211,7 +201,7 @@
     height: 1px;
     background-color: var(--coral);
 
-    @media (max-width: $max-mobile) {
+    @media (max-width: $big-mobile) {
       left: 81px;
       bottom: -13px;
     }
@@ -226,7 +216,7 @@
 
   color: var(--gray-07);
 
-  @media (max-width: $max-mobile) {
+  @media (max-width: $big-mobile) {
     margin-bottom: 17px;
   }
 }
@@ -235,7 +225,7 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: $max-mobile) {
+  @media (max-width: $big-mobile) {
     flex-direction: column;
   }
 }
@@ -243,7 +233,7 @@
 .place-descriptions__review-author-avatar {
   margin-right: 15px;
 
-  @media (max-width: $max-mobile) {
+  @media (max-width: $big-mobile) {
     margin-right: 0;
     margin-bottom: 10px;
   }

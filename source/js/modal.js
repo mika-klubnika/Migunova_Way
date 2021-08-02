@@ -1,12 +1,10 @@
-'use strict'
-
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalButton = Array.from(document.querySelectorAll('.modal-button'));
 
 
 modalButton.forEach(button => {
-  button.addEventListener('click',evt => {
+  button.addEventListener('click', evt => {
     evt.preventDefault();
     modal.classList.add('modal--show');
   })

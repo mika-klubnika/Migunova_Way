@@ -1,47 +1,18 @@
 .container {
   max-width: $max-desktop;
+  min-width: $min-mobile;
   margin: 0 auto;
   padding-left: 137px;
   padding-right: 137px;
 
+  @media (max-width: $big-tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   @media (max-width: $max-tablet) {
-    min-width: $min-tablet;
-    max-width: $max-tablet;
     padding-left: 0;
     padding-right: 0;
-  }
-
-  @media (max-width: $max-mobile) {
-    min-width: $min-mobile;
-    max-width: $max-mobile;
-  }
-
-  &--banner {
-    display: flex;
-    justify-content: flex-end;
-
-    @media (max-width: $max-tablet) {
-      justify-content: center;
-    }
-  }
-
-  &--footer {
-    display: grid;
-    grid-template-columns: 402px 390px 370px;
-
-    @media (max-width: $max-tablet) {
-      grid-template-columns: 408px 350px;
-      grid-template-rows: auto auto;
-      row-gap: 20px;
-      padding-left: 5px;
-    }
-
-    @media (max-width: $max-mobile) {
-      grid-template-columns: 288px;
-      grid-template-rows: auto auto auto;
-      row-gap: 12px;
-      padding-left: 10px;
-    }
   }
 }
 
@@ -102,7 +73,7 @@
 }
 
 .button {
-  height: 75px;
+  min-height: 75px;
 
   font-weight: bold;
   font-size: 12px;
