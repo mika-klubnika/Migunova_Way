@@ -58,6 +58,7 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(uglify())
     .pipe(rename(path => path.basename += ".min"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
@@ -104,7 +105,6 @@ exports.sprite = sprite;
 
 const copy = () => {
   return gulp.src([
-    "source/js/*.js",
     "source/fonts/*.{woff2,woff}",
     "source/img/**/*.{jpg,png,svg,webp}",
     "!source/img/icons/*"
